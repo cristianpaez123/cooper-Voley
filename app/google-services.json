@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "213186480078",
+    "project_id": "cooper-voley",
+    "storage_bucket": "cooper-voley.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213186480078:android:dfd23ff1b79b8b3e2e0d9f",
+        "android_client_info": {
+          "package_name": "com.example.coopervoley"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTBARa6KlRK1g52u42S5-K7eDYAVVpyYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
