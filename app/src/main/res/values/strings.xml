@@ -10,4 +10,8 @@
     <string name="error_user_already_exists">An account with this email already exists</string>
     <string name="error_network">Network error. Please check your connection</string>
     <string name="error_unexpected">An unexpected error occurred</string>
+
+    <string name="error_email_required">Email is required</string>
+    <string name="error_email_invalid">Invalid email format</string>
+    <string name="error_password_required">Password is required</string>
 </resources>
