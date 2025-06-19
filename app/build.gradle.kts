@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
-
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -57,7 +57,6 @@ dependencies {
     //hilt
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-compiler:2.48")
-
     //viewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.7.0")
     //lifeData
@@ -71,5 +70,8 @@ dependencies {
     //Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
+    //navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
 }
