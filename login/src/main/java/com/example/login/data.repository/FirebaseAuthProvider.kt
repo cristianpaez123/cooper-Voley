@@ -2,13 +2,11 @@ package com.example.login.data.repository
 
 import com.example.coopervoley.domain.model.LoginResult
 import com.example.login.R
-import com.example.login.data.repository.AuthProvider
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
-import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.tasks.await
 
 import javax.inject.Inject

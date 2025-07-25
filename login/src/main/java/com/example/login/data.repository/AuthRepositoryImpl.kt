@@ -2,7 +2,6 @@ package com.example.login.data.repository
 
 import com.example.coopervoley.domain.Repository.AuthRepository
 import com.example.coopervoley.domain.model.LoginResult
-import com.google.firebase.auth.FirebaseUser
 import javax.inject.Inject
 
 class AuthRepositoryImpl @Inject constructor(
