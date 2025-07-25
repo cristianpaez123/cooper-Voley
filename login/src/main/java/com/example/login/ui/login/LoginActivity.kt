@@ -10,9 +10,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.coopervoley.R
-import com.example.coopervoley.databinding.ActivityLoginBinding
-import com.example.coopervoley.ui.MainActivity
+import com.example.login.MainActivity
+import com.example.login.R
+import com.example.login.databinding.ActivityLoginBinding
 import com.example.mobileappproductsearch.ui.common.UiState
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint

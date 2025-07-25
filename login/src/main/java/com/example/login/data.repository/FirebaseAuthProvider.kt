@@ -1,22 +1,21 @@
-package com.example.coopervoley.data.Repository
+package com.example.login.data.repository
 
-import com.example.coopervoley.R
-import com.example.coopervoley.domain.Repository.AuthRepository
 import com.example.coopervoley.domain.model.LoginResult
+import com.example.login.R
+import com.example.login.data.repository.AuthProvider
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.tasks.await
 
 import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
-class AuthRepositoryImpl @Inject constructor(
+class FirebaseAuthProvider @Inject constructor(
     private val firebaseAuth: FirebaseAuth
-) : AuthRepository {
+) : AuthProvider {
 
     override suspend fun login(email: String, password: String): LoginResult {
         return try {
@@ -34,4 +33,7 @@ class AuthRepositoryImpl @Inject constructor(
         }
     }
 
+    override fun getCurrentUser(): FirebaseUser? {
+        return firebaseAuth.currentUser
+    }
 }

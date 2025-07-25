@@ -1,7 +1,7 @@
 package com.example.coopervoley.utils
 
 import androidx.annotation.StringRes
-import com.example.coopervoley.R
+import com.example.login.R
 
 object CredentialValidator {
 

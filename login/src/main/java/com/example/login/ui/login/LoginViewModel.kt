@@ -1,10 +1,9 @@
 package com.example.coopervoley.ui.login
 
-import androidx.lifecycle.ViewModel
-import com.example.coopervoley.R
 import com.example.coopervoley.domain.UseCase.LoginUseCase
 import com.example.coopervoley.domain.model.LoginResult
 import com.example.coopervoley.utils.CredentialValidator
+import com.example.login.R
 import com.example.mobileappproductsearch.ui.common.BaseViewModel
 import com.example.mobileappproductsearch.ui.common.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
