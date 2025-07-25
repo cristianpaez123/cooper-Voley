@@ -1,0 +1,19 @@
+package com.example.registration.ui
+
+import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.registration.R
+import com.example.registration.databinding.ActivityRegistrationBinding
+
+private lateinit var binding: ActivityRegistrationBinding
+
+class RegistrationActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityRegistrationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
+}

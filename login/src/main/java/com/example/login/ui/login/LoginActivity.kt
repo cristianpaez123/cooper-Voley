@@ -10,11 +10,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.login.MainActivity
 import com.example.login.R
 import com.example.login.databinding.ActivityLoginBinding
 import com.example.mobileappproductsearch.ui.common.UiState
-import com.example.registration.RegistrationActivity
+import com.example.registration.ui.RegistrationActivity
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
