@@ -48,6 +48,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    //dependencia
+    implementation(project(":registration"))
 
     //hilt
     implementation("com.google.dagger:hilt-android:2.48")

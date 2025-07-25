@@ -14,6 +14,7 @@ import com.example.login.MainActivity
 import com.example.login.R
 import com.example.login.databinding.ActivityLoginBinding
 import com.example.mobileappproductsearch.ui.common.UiState
+import com.example.registration.RegistrationActivity
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -90,7 +91,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun successState() {
        // showLoadingOverlay(false)
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, RegistrationActivity::class.java))
         finish()
     }
 
