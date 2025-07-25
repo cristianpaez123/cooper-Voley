@@ -13,7 +13,4 @@ class AuthRepositoryImpl @Inject constructor(
         return authProvider.login(email, password)
     }
 
-    override fun getCurrentUser(): FirebaseUser? {
-        return authProvider.getCurrentUser()
-    }
 }

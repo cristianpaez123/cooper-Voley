@@ -33,7 +33,4 @@ class FirebaseAuthProvider @Inject constructor(
         }
     }
 
-    override fun getCurrentUser(): FirebaseUser? {
-        return firebaseAuth.currentUser
-    }
 }

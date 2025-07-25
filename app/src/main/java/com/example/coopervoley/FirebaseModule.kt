@@ -1,4 +1,4 @@
-package com.example.login.di
+package com.example.coopervoley
 
 import com.example.login.data.repository.AuthProvider
 import com.example.login.data.repository.FirebaseAuthProvider

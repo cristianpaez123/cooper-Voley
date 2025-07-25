@@ -5,5 +5,4 @@ import com.google.firebase.auth.FirebaseUser
 
 interface AuthProvider {
     suspend fun login(email: String, password: String): LoginResult
-    fun getCurrentUser(): FirebaseUser?
 }
