@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "Cooper Voley"
 include(":app")
 include(":login")
+include(":registration")
