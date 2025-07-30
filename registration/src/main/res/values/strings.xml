@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">registration</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="personal_information">INFORMACION PERSONAL</string>
+
+    <string-array name="document_types">
+        <item>Cédula</item>
+        <item>Tarjeta de identidad</item>
+        <item>Pasaporte</item>
+        <item>Registro Civil</item>
+        <item>Otro</item>
+    </string-array>
 </resources>

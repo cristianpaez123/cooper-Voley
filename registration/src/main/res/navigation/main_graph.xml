@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/personalInformationFragment"
-        android:name="com.example.registration.ui.fragments.personalInformationFragment"
+        android:name="com.example.registration.ui.fragments.PersonalInformationFragment"
         tools:layout="@layout/fragment_personal_information">
     </fragment>
 
