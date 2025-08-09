@@ -13,50 +13,75 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="INFORMACIÓN PERSONAL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nombresLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:hint="Nombre">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:imeOptions="actionNext"/>
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ageLayout"
             android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:hint="Edad">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:imeOptions="actionNext"/>
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fechaNacimientoLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fecha de nacimiento"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:hint="Fecha de nacimiento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editBirthday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="false"
                 android:clickable="true"
-                android:inputType="none"
-                android:imeOptions="actionNext"/>
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -64,8 +89,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tipo de documento"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:hint="Tipo de documento">
 
             <AutoCompleteTextView
                 android:id="@+id/documentTypeDropdown"
@@ -78,55 +103,55 @@
             android:id="@+id/numeroDocumentoLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número de documento"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:hint="Número de documento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editDocumentNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:imeOptions="actionNext"/>
+                android:imeOptions="actionNext"
+                android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edadLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Barrio"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:hint="Barrio">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editNeighborhood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:imeOptions="actionNext"/>
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/celularLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Celular"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:hint="Celular">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:imeOptions="actionDone"/>
+                android:imeOptions="actionDone"
+                android:inputType="phone" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/buttonNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Siguiente"
             android:layout_marginTop="24dp"
+            android:backgroundTint="@color/black"
+            android:text="Siguiente"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/black"/>
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </ScrollView>

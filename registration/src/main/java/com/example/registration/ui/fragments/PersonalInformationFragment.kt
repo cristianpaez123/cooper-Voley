@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.viewModels
+import com.example.myapplication.utils.InputValidator
 import com.example.registration.R
 import com.example.registration.databinding.FragmentPersonalInformationBinding
 import com.example.registration.ui.RegistractionViewModel
@@ -43,10 +44,16 @@ class PersonalInformationFragment : Fragment() {
                 .build()
 
             datePicker.show(parentFragmentManager, "date_picker")
+
             datePicker.addOnPositiveButtonClickListener { dateMillis ->
-                val formattedDate =
-                    SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(Date(dateMillis))
+                val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                sdf.timeZone = TimeZone.getTimeZone("UTC")
+                val formattedDate = sdf.format(Date(dateMillis))
+
                 binding.editBirthday.setText(formattedDate)
+
+                binding.editBirthday.tag = dateMillis
+                binding.editBirthday.error = null
             }
         }
     }
@@ -58,21 +65,35 @@ class PersonalInformationFragment : Fragment() {
     }
 
     private fun setupNextButton() {
-        binding.buttonNext.setOnClickListener {
-            val name = binding.editName.text.toString()
-            val age = binding.editAge.text.toString()
-            val birthdate = binding.editBirthday.text.toString()
-            val documentNumber = binding.editDocumentNumber.text.toString()
-            val typeDocument = getSelectedDocumentType()
-            val neighborhood = binding.editNeighborhood.text.toString()
-            val phoneNumber = binding.editPhoneNumber.text.toString()
+        binding.apply {
+            buttonNext.setOnClickListener {
+                val fieldsValid = InputValidator.validateRequiredFields(
+                    binding.editName,
+                    binding.editAge,
+                    binding.editBirthday,
+                    binding.editDocumentNumber,
+                    binding.editNeighborhood,
+                    binding.editPhoneNumber
+                )
 
-            viewModel.updatePersonalData(name,age,birthdate,documentNumber,typeDocument,neighborhood,phoneNumber)
+                val birthdayValid = InputValidator.validateBirthday(binding.editBirthday)
+                val documentTypeValid = InputValidator.validateDropdown(
+                    binding.documentTypeDropdown,
+                    binding.tipoDocumentoLayout
+                )
+                if (fieldsValid && birthdayValid && documentTypeValid) {
+                    viewModel.updatePersonalData(
+                        binding.editName.text.toString().trim(),
+                        binding.editAge.text.toString().trim(),
+                        binding.editBirthday.text.toString().trim(),
+                        binding.editDocumentNumber.text.toString().trim(),
+                        binding.documentTypeDropdown.text.toString(),
+                        binding.editNeighborhood.text.toString().trim(),
+                        binding.editPhoneNumber.text.toString().trim()
+                    )
+                }
+            }
         }
-    }
-
-    private fun getSelectedDocumentType(): String {
-        return binding.documentTypeDropdown.text.toString()
     }
 
     private fun observeViewModel() {
